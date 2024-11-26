@@ -1,0 +1,41 @@
+input[type="range"] {
+    margin-top: 16px;
+    accent-color: black;
+}
+
+textarea {
+    --padding: 32px;
+    width: calc(100% - var(--padding));
+    max-width: calc(100% - var(--padding));
+}
+
+.text,
+textarea {
+    background-color: white;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    outline: none;
+}
+
+.blink {
+    animation: 1s ease-in-out 1s infinite reverse both running blink;
+}
+
+@keyframes blink {
+    25% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+}
+
+[hidden] {
+    display: none;
+}

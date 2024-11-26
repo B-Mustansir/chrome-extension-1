@@ -1,0 +1,11 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 2em;
+}
+
+.read-the-docs {
+    color: #888;
+}
