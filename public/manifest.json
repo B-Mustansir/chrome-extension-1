@@ -9,7 +9,8 @@
       "16": "vite.svg",
       "48": "vite.svg",
       "128": "vite.svg"
-    }
+    },
+    "default_popup": "index.html"
   },
   "side_panel": {
     "default_path": "index.html"
@@ -20,8 +21,8 @@
     "128": "vite.svg"
   },
   "permissions": [
-    "aiLanguageModelOriginTrial",
-    "sidePanel"
+    "sidePanel",
+    "aiLanguageModelOriginTrial"
   ],
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvf0O/bR3JULoj6dOpG7sDif4BNVgootUIfSybh2a7jX47BglfZFNH/aRUgDjNtcTBPinXdGbljMVIudQ7w6LiwVq9b1Ht6ZXFVtHTKOsDWtVh/rVKE/AGue9eQ7xCncHFl4zLJUaDRUIRqe5zvjHtaMr8p92I3c/6k43LmTUp1QHz0NooDJRYKRPLS77YVDX8hZc2yopIH5NIY25Ned3wxZ/NWV70GZkYqFRN+UzvMS8bJUEY23L1AMSX7YQjMThY0BCZ/MBLo8UBLs8vN11EphMpLxnBhF2Zwwj2sCPR0jn0ev8HYCtKmGx8nzOl79oK24RFIsW8YWFB2fd28fBLwIDAQAB",
   "trial_tokens": [
@@ -42,6 +43,10 @@
     {
       "matches": ["https://www.linkedin.com/*"],
       "js": ["Linkedin.js"]
+    },
+    {
+      "matches":["https://www.facebook.com/*"],
+      "js":["facebook.js"]
     }
   ]
 }

@@ -1,4 +1,4 @@
-function addButtonToDiv() {
+    function addButtonToDiv() {
     const div = document.querySelector('.share-creation-state__footer');
 
     if (div) {

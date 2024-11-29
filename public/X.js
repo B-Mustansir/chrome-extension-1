@@ -45,4 +45,20 @@ const observer = new MutationObserver((mutationsList, observer) => {
 
 // observing the document body for DOM changes
 observer.observe(document.body, { childList: true, subtree: true });
-  
+
+
+/* const spanElement = $0.querySelector('span');
+if (spanElement) {
+  spanElement.textContent = 'New Text Content';
+}
+const data = {
+  modifiedSpanTextContent: spanElement ? spanElement.textContent : null,
+}; 
+
+class = public-DraftStyleDefault-block public-DraftStyleDefault-ltr
+
+
+Multiple Post button 
+nav.css-175oi2r.r-1awozwy.r-18u37iz.r-knv0ih.r-13awgt0.r-m5k245 aria-live = polite , role = navigation
+
+*/
