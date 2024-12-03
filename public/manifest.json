@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Vite React Chrome Extension",
+  "name": "Social Media Sage",
   "version": "1.0.0",
-  "description": "A Chrome extension built with Vite and React",
+  "description": "If you wanna be a Sage!",
   "action": {
     "default_title": "Open Chat Interface",
     "default_icon": {
-      "16": "vite.svg",
-      "48": "vite.svg",
-      "128": "vite.svg"
+      "16": "Sage.png",
+      "48": "sage.png",
+      "128": "sage.png"
     },
     "default_popup": "index.html"
   },
@@ -16,9 +16,9 @@
     "default_path": "index.html"
   },
   "icons": {
-    "16": "vite.svg",
-    "48": "vite.svg",
-    "128": "vite.svg"
+    "16": "Sage.png",
+    "48": "sage.png",
+    "128": "sage.png"
   },
   "permissions": [
     "sidePanel",

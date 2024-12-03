@@ -1,4 +1,4 @@
-    function addButtonToDiv() {
+function addButtonToDiv() {
     const div = document.querySelector('.share-creation-state__footer');
 
     if (div) {
@@ -24,23 +24,42 @@
                 button.style.backgroundColor = "#1DA1F2";
             });
 
-            // Button click event to replace <p> tag content
-            button.addEventListener("click", () => {
+            // Button click event
+            button.addEventListener("click", async () => {
                 const editor = document.querySelector('.ql-editor');
-
-                if(editor) {
+                if (editor) {
                     const pTag = editor.querySelector('p');
+                    if (pTag) {
+                        // Capture the user input from the editor
+                        const userInput = pTag.textContent.trim();
+                        console.log("User Input:", userInput);
 
-                    if(pTag) {
-                        while(pTag.firstChild) {
-                            pTag.removeChild(pTag.firstChild);
+                        // Call Gemini On Device model to generate content
+                        try {
+                            const params = {
+                                systemPrompt: 'You are a professional content writer. Rewrite the given text for a LinkedIn post.',
+                                temperature: 1,  // Adjust the temperature as needed
+                                topK: 3  // Adjust the value based on your needs
+                            };
+
+                            const generatedContent = await runPrompt(userInput, params);
+                            console.log("Generated Content:", generatedContent);
+
+                            // Replace the content in the editor with the generated content
+                            while (pTag.firstChild) {
+                                pTag.removeChild(pTag.firstChild);
+                            }
+                            const newContent = document.createTextNode(generatedContent);
+                            pTag.appendChild(newContent);
+                        } catch (e) {
+                            console.error("Error generating content:", e);
+                            pTag.textContent = "Error generating content.";
                         }
-
-                        const newcontent = document.createTextNode("It works well");
-                        pTag.appendChild(newcontent);
+                    } else {
+                        console.log("p tag not found!");
                     }
-                }else {
-                    console.log("editor was not found!");
+                } else {
+                    console.log("Editor was not found!");
                 }
             });
 
