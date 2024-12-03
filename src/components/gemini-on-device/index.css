@@ -1,11 +1,155 @@
-.card {
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #gemini-on-device {
+    background-color: #1E1E1E;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  textarea {
+    width: 100%;
+    background-color: #2B2B2B;
+    color: #E0E0E0;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    line-height: 1.5;
+    resize: none;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  textarea:focus {
+    border-color: #4CAF50;
+  }
+  
+  input[type='range'] {
+    width: 100%;
+    background-color: #333;
+    height: 6px;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+  
+  input[type='range']:focus {
+    outline: none;
+  }
+  
+  label {
+    font-size: 1rem;
+    color: #E0E0E0;
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .card {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    padding: 2em;
-}
-
-.read-the-docs {
-    color: #888;
-}
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:disabled {
+    background-color: #777;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #45a049;
+  }
+  
+  #gemini-response {
+    background-color: #292929;
+    color: #B0B0B0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  #gemini-loading {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #B0B0B0;
+  }
+  
+  .blink {
+    animation: blink 1s infinite ease-in-out;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  #gemini-error {
+    color: #FF6347;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  input[type="range"]:disabled {
+    background-color: #444;
+  }
+  
+  @media (max-width: 480px) {
+    #gemini-on-device {
+      padding: 15px;
+    }
+    h1 {
+      font-size: 1.6rem;
+    }
+    button {
+      padding: 8px 16px;
+    }
+  }
+  
